@@ -1,0 +1,277 @@
+/* Reset CSS básico para garantir consistência entre navegadores */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-image 1s ease;
+    position: relative; /* Adicionado position relative para body e html */
+}
+
+/* Estilos gerais para o fundo e conteúdo */
+.backgroundcolor {
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("imagens/dd.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    overflow: visible;
+    position: relative; /* Adicionado position relative */
+}
+
+header {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    background-color: transparent;
+    padding: 15px;
+}
+
+nav {
+    padding: 0px;
+    padding-left: 15px;
+    text-align: right;
+    justify-content: flex-end;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: bold;
+    overflow: visible;
+    z-index: 100;
+}
+
+nav ul {
+    padding: 0px;
+    justify-content: flex-end;
+    list-style: none;
+    flex-direction: row;
+    display: flex;
+    margin-top: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    padding: 10px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    font-size: 16px; /* Tamanho inicial do texto */
+}
+
+nav ul li:hover a {
+    color: black;
+    transform: scale(1.1); /* Aumenta em 10% ao passar o mouse */
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+nav ul li:hover::after {
+    opacity: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.blurry-square {
+    width: 80%;
+    max-width: 1000px; /* Reduzi o valor máximo */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    transition: margin-top 0.5s ease;
+}
+
+.blurry-square .content {
+    margin-bottom: 40px;
+}
+
+.blurry-square h1,
+.blurry-square h2,
+.blurry-square h3 {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blurry-square .video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.blurry-square iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.downloads-section {
+    margin-top: 50px;
+}
+
+.downloads-section h1 {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra no texto */
+    font-size: 36px; /* Tamanho do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #fff; /* Cor de fundo */
+    display: inline-block; /* Permite aplicar padding e borda */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.download-item {
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+.download-item img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.download-item:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.cordaletra {
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.cordaletra:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+.spacer {
+    height: 1000px; /* Espaço para simular o conteúdo abaixo */
+}
+
+.about-section {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    transition: margin-top 0.5s ease;
+}
+
+.about-section h1 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-item {
+    text-align: left;
+}
+
+.about-item p {
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+.fontRPG {
+    font-family: 'Aclonica', sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1em;
+}
+
